@@ -1,0 +1,361 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Skpace Grotes";
+  src: url("https://fonts.google.com/specimen/Space+Grotesk");
+  font-weight: 500;
+}
+
+.body {
+  font-family: "Skpace Grotes";
+  padding: 0 auto;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.bg-main-img {
+  width: 400px;
+  height: 100vh;
+}
+.bg-main-img-mobile {
+  display: none;
+}
+
+.container {
+  display: flex;
+}
+
+.card-front {
+  position: absolute;
+  left: 0;
+  transform: translateY(35%) translateX(25%) scale(0.8);
+}
+
+.front-content {
+  position: absolute;
+  top: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.user-name {
+  color: white;
+  font-size: 18px;
+  transform: translateY(370%);
+}
+
+.cardnumber {
+  color: white;
+  transform: translateY(250%);
+  word-spacing: 20px;
+  letter-spacing: 3px;
+  font-size: 28px;
+}
+
+.exp-date {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  transform: translateY(360%) translateX(1em);
+}
+
+.card-back {
+  position: absolute;
+  left: 0;
+  transform: translateY(120%) translateX(40%) scale(0.8);
+}
+
+.back-content {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(620%) translateX(-250%);
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  margin-left: 23%;
+  margin-top: -9%;
+  transform: translateY(-10%);
+  width: 50%;
+  background-color: white;
+}
+
+#expiry-error {
+  transform: translateY(170%) translateX(-270%);
+}
+
+form {
+  color: hsl(278, 68%, 11%);
+  margin-left: 10%;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  all: unset;
+  max-width: 57.5%;
+  padding: 7px;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-top-color: hsl(270, 3%, 87%);
+  outline: none;
+  border-radius: 5px;
+}
+
+form input .error {
+  border: 1px solid red;
+}
+
+.flex-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-main input {
+  width: 25%;
+  height: 20px;
+  transform: translateX(-180%) translateY(65%);
+  border-radius: 5px;
+}
+
+form .button {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+form .exp {
+  width: 10%;
+}
+
+form .cvc-input {
+  transform: translateX(-130%) translateY(60%);
+}
+
+form label {
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+label[for="cvc"] {
+  color: white;
+  transform: translateX(-440%);
+}
+
+form button {
+  background: hsl(278, 68%, 11%);
+  color: white;
+  border-radius: 10px;
+  margin-top: 15%;
+  position: absolute;
+  left: 0;
+  width: 56%;
+  padding: 7px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transform: translateY(160%) translateX(17%);
+}
+.invalid {
+  color: red;
+  font-size: 10px;
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+#thank-you-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(150%);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+
+  .bg-main-img-mobile {
+    display: block;
+    width: 100%;
+    transform: scaleX(1.6) scaleY(1.5);
+  }
+
+  .bg-main-img {
+    display: none;
+  }
+
+  .bg-img {
+    width: 160em;
+    background-color: red;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 0;
+    margin-top: 40px;
+    transform: scale(1) translateX(5.5em);
+  }
+
+  .card-front {
+    z-index: 1;
+    position: absolute;
+    transform: scale(1) translateX(1.6em) translateY(-5.2em);
+  }
+  .form {
+    width: 100%;
+    transform: translateY(10em);
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  #exp-date-input-mm {
+    margin: 0;
+    margin-left: -30px;
+    gap: 70px;
+  }
+
+  .flex-main > label {
+    margin-left: 5px;
+  }
+
+  form {
+    transform: translateX(10%) translateY(40%) scale(1.3);
+    height: 170%;
+  }
+
+  .front-content {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    margin-top: 35%;
+  }
+
+  .front-content {
+    color: black;
+    z-index: 20;
+    transform: translateY(-10em);
+  }
+
+  #thank-you-section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(350%);
+  }
+
+  #thank-you-header {
+    display: block;
+    margin-left: 15%;
+  }
+
+  .thank p {
+    margin-left: 20%;
+    margin-top: 20px;
+  }
+
+  .thank img {
+    margin-left: 40%;
+    margin-bottom: 30px;
+  }
+
+  .exp-date {
+    margin-right: 20px;
+  }
+
+  .cvc {
+    margin-top: -13%;
+    margin-left: -6px;
+  }
+
+  #continue {
+    height: 50px;
+    background: hsl(278, 68%, 11%);
+    width: 400px;
+    color: white;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 11%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .thank {
+    position: absolute;
+    top: 0;
+    margin-top: 100px;
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cardnumber {
+    font-size: 25px;
+  }
+
+  .front-content {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    margin-top: 35%;
+    margin-left: 0;
+  }
+
+  .cvc-input {
+    margin-left: 50px;
+  }
+
+  label[for="cvc"] {
+    position: absolute;
+    left: 0;
+    transform: translateY(5%) translateX(550%);
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .cardnumber {
+    font-size: 1rem;
+  }
+
+  .front-content {
+    transform: translateY(-105%);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.hidden {
+  display: none;
+}
